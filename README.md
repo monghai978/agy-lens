@@ -130,4 +130,5 @@ sh ./uninstall.sh
 
 - **Plugin directory:** `~/.gemini/config/plugins/agy-lens/`
 - **Local settings &amp; derived cache:** `~/.gemini/antigravity/plugin_data/agy-lens/` (`settings.json`, `usage-archive-v1.json`, optional `pricing-sync.json`)
+- **Session exports:** `~/Downloads/agy-lens/` (or `~/.gemini/antigravity/plugin_data/agy-lens/exports/` if `~/Downloads` is unavailable)
 - **Antigravity files modified:** **None.**

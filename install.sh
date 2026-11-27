@@ -1,12 +1,22 @@
 #!/usr/bin/env sh
 set -eu
 
+if [ -z "${HOME:-}" ] || [ "${HOME}" = "/" ]; then
+  echo "Invalid HOME directory: '${HOME:-}'" >&2
+  exit 1
+fi
+
 SOURCE_ROOT="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
 PLUGINS_DIR="${HOME}/.gemini/config/plugins"
 TARGET_DIR="${PLUGINS_DIR}/agy-lens"
 
 if [ ! -f "${SOURCE_ROOT}/plugin.json" ]; then
   echo "Invalid package directory: missing plugin.json in ${SOURCE_ROOT}" >&2
+  exit 1
+fi
+
+if [ -f "${TARGET_DIR}/plugin.json" ] && ! grep -Eq '"name"[[:space:]]*:[[:space:]]*"agy-lens"' "${TARGET_DIR}/plugin.json"; then
+  echo "Refusing to overwrite unrelated plugin at ${TARGET_DIR}" >&2
   exit 1
 fi
 

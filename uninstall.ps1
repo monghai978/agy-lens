@@ -1,5 +1,5 @@
 param(
-  [switch]$PurgeData
+  [switch]$KeepSettings
 )
 $ErrorActionPreference = 'Stop'
 
@@ -20,7 +20,7 @@ if (Test-Path -LiteralPath $targetDir) {
   Write-Host "Plugin directory not found: $targetDir"
 }
 
-if ($PurgeData -and (Test-Path -LiteralPath $dataDir)) {
+if (-not $KeepSettings -and (Test-Path -LiteralPath $dataDir)) {
   Remove-Item -LiteralPath $dataDir -Recurse -Force
   Write-Host "Removed plugin data: $dataDir"
 }
