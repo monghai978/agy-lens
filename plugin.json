@@ -1,0 +1,12 @@
+{
+  "name": "agy-lens",
+  "displayName": "Agy Lens",
+  "version": "1.0.0",
+  "description": "Read-only native telemetry sidecar for Antigravity: context window breakdown, cache hit, token speed, usage and cost analytics, full-text transcript search, and session export.",
+  "logo": "assets/logo.svg",
+  "suggestedPrompts": [
+    "Show context window breakdown and cache hit rate for this session",
+    "Analyze my token usage and estimated cost over the last 7 days",
+    "Search past conversations for a command or code snippet"
+  ]
+}

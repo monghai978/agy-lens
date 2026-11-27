@@ -1,0 +1,26 @@
+{
+  "command": "node",
+  "args": [
+    "main.mjs"
+  ],
+  "env": {
+    "AGY_LENS_VERSION": "1.0.0"
+  },
+  "restart_policy": "always",
+  "display_name": "Agy Lens",
+  "description": "Native read-only telemetry: context window, cache hit, token speed, usage cost, search, and export.",
+  "has_web_ui": true,
+  "agent_permissions": {
+    "allows_user_interactions": false
+  },
+  "ui_config": {
+    "display_name": "Agy Lens",
+    "views": [
+      {
+        "path": "/",
+        "entrypoint": "SIDECAR_UI_ENTRYPOINT_AUX_PANE",
+        "title": "Agy Lens"
+      }
+    ]
+  }
+}
