@@ -1,7 +1,7 @@
 {
   "name": "agy-lens",
   "displayName": "Agy Lens",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Read-only native telemetry sidecar for Antigravity: context window breakdown, cache hit, token speed, usage and cost analytics, full-text transcript search, and session export.",
   "logo": "assets/logo.svg",
   "suggestedPrompts": [
